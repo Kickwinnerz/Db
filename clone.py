@@ -1342,7 +1342,7 @@ def _____Pakistan_____():
 #---------------------------| Old |---------------------------#
 def _____oldx_____():
     clear()
-    limit = str(random.randint(100000,900000))
+    limit = str(random.randint(10000,70000))
     for nmbr in range(int(limit)):
         # 14 digit UID jo 6 se start hoti hai
         nmp = '6' + ''.join(rc(digits) for _ in range(13))
