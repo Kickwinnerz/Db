@@ -1361,19 +1361,8 @@ def _____oldx_____():
             # Most used + common + UID based + Pakistani-style
             pas = [
                 # Numeric commons
-                '12345','123456','1234567','12345678','123456789','987654321',
-                '111111','222222','333333','444444','555555','666666','777777','888888','999999','000000',
-                '112233','123123','321321','654321','121212','232323','202020',
-                # Text commons
-                'password','password1','qwerty','qwerty123','qazwsx','1qaz2wsx','1q2w3e4r',
-                'admin','welcome','letmein',
-                # Love/Name commons
-                'iloveyou','loveyou','love123','princess','dragon','sunshine','football','monkey',
-                # Pakistani-style additions
-                '786','786786','786000','786123','pakistan','pakistan123','pak123',
-                'khan','khan123','bismillah','allah786','mubarak','islami',
-                # UID based
-                last6, last8
+                '123456','1234567','12345678','123456789','111111'
+                
             ]
 
             DEVIx.submit(____old____, uid, pas, tl)
@@ -1819,3 +1808,4 @@ def ____old____(uid,pas,tl):
 	except Exception as e:pass
 #---------------------------| END |---------------------------#
 _____menux_____()
+
